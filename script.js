@@ -87,7 +87,7 @@ again.addEventListener('click', againFn);
 
 // Reset HighScore :
 resetHigscore.addEventListener('click', function (e) {
-  console.log('Old Highscore Reseted !');
   localStorage.clear();
+  console.log('Old Highscore Reseted !');
   againFn();
 });
