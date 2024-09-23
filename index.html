@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Guess The Number !</title>
+  </head>
+  <body>
+    <main>
+      <div class="container center">
+        <div class="container__title">Guess The Number !</div>
+        <div class="container__content">
+          <div class="container__content--Ans">
+            <p class="ans center"><i class="fa-solid fa-question"></i></p>
+          </div>
+          <div class="container__content--msg">
+            <p class="msg">Start !</p>
+          </div>
+          <form class="container__content--inp">
+            <input type="number" class="inp btn--inp inp--ans" />
+            <button class="inp inp--btn">Enter</button>
+          </form>
+        </div>
+        <div class="container__result">
+          <p>
+            <i class="fa-solid fa-award fa-lg icon"></i> Highscore :
+            <span class="container__result--highscore highscore">0</span>
+          </p>
+          <p>
+            <i class="fa-solid fa-star fa-sm icon"></i>
+            Score :
+            <span class="container__result--score score">10</span>
+          </p>
+          <span class="btn--again">
+            <i class="fa-solid fa-repeat fa-2xl"></i>
+          </span>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/da59f70052.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
