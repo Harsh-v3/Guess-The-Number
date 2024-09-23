@@ -22,3 +22,4 @@ In This Game player must guess a secret number between 1 and 20. For each wrong 
 ### Note
 
 Please feel free to play the game and share your thoughts .
+[https://harsh-v3.github.io/Guess-The-Number/](https://harsh-v3.github.io/Guess-The-Number/)
