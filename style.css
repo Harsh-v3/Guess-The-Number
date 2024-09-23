@@ -48,7 +48,7 @@ body {
   display: grid;
   width: 60% auto;
   height: auto;
-  box-shadow: 2rem 2rem 10rem var(--color-shadow);
+  box-shadow: 2rem 2rem 4rem var(--color-shadow);
 }
 
 .container__title {
@@ -96,28 +96,27 @@ body {
   padding: 1rem;
 }
 
-.msg {
+.text-style {
+  font-family: inherit;
   text-align: center;
   color: var(--color-dark);
   font-size: 1.8rem;
   font-weight: 400;
 }
 
+.el-formet {
+  border: none;
+  border-radius: 0.2rem;
+  background: var(--color-primary);
+  box-shadow: 0 0 2rem var(--color-shadow);
+  transition: all 0.2s ease-in-out;
+}
+
 .inp--ans {
   grid-area: input;
   height: 5rem;
   outline: none;
-  border: none;
-  border-radius: 0.2rem;
-  background: var(--color-primary);
-  color: var(--color-dark);
-  text-align: center;
-  font-weight: 500;
-  font-size: 2rem;
   border-bottom: 3px solid transparent;
-  box-shadow: 0 0 2rem var(--color-shadow);
-
-  transition: all 0.2s ease-in-out;
 }
 
 .inp--ans:focus {
@@ -131,15 +130,7 @@ body {
 .inp--btn {
   grid-area: button;
   border: none;
-  border-radius: 0.2rem;
-  background: var(--color-primary);
-  font-size: 2rem;
-  font-family: inherit;
-  color: var(--color-dark);
-  font-weight: 500;
   cursor: pointer;
-  box-shadow: 0 0rem 2rem var(--color-shadow);
-  transition: all 0.2s ease-in;
 }
 
 .inp--btn:hover {
@@ -202,7 +193,7 @@ body {
 
 .icon {
   color: var(--color-primary-dark);
-  padding-right: 0.5rem;
+  padding: 0 0.5rem;
 }
 
 .btn--again {
@@ -217,16 +208,11 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
-.btn--again:hover,
-.btn--again:focus,
-.btn--again:active {
+.btn--again:hover {
   color: var(--color-primary);
 }
 
-@media screen and (max-width: 700px) {
-  .container {
-    width: 80%;
-  }
+@media screen and (max-width: 800px) {
   .container__content--inp {
     row-gap: 1rem;
     grid-template-areas:
@@ -237,38 +223,32 @@ body {
     height: 5rem;
   }
 }
-@media screen and (max-width: 800px) {
-  .container {
-    width: 75%;
-  }
-}
-@media screen and (max-width: 1000px) {
-  .container {
-    width: 70%;
+
+@media screen and ((max-width: 1000px) or (max-height: 700px)) {
+  html {
+    font-size: 52%;
   }
 }
 
-@media screen and (max-height: 700px) {
+@media screen and ((max-width: 600px) or (max-height: 600px)) {
   html {
     font-size: 41.6%;
   }
 }
-@media screen and (max-width: 450px) {
+
+@media screen and ((max-height: 400px) or (max-width : 450px)) {
   html {
-    font-size: 41.6%;
+    font-size: 25%;
   }
-}
-@media screen and (max-height: 450px) {
-  html {
-    font-size: 31.25%;
-  }
-}
-@media screen and (max-height: 300px) {
-  html {
-    font-size: 20.8%;
+  .container {
+    width: 80%;
   }
 }
 
-.uparr {
-  padding-left: 0.5rem;
+.btn--info {
+  scale: 1.2;
+  color: var(--color-light);
+  position: absolute;
+  right: -3rem;
+  cursor: pointer;
 }

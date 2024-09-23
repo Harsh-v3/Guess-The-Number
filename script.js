@@ -11,16 +11,22 @@ const highscoreEl = document.querySelector('.highscore');
 // Buttons :
 const enter = document.querySelector('.inp--btn');
 const again = document.querySelector('.btn--again');
+const resetHigscore = document.querySelector('.btn--info');
 
 // Variables :
-let Guess = Math.floor(Math.random() * 20 + 1);
-let score = 10;
-let highscore = localStorage.getItem('Highscore')
-  ? +localStorage.getItem('Highscore')
-  : 0;
-
-console.log(Guess, highscore);
-highscoreEl.textContent = highscore;
+let Guess;
+let score;
+let highscore;
+const init = function () {
+  Guess = Math.floor(Math.random() * 20 + 1);
+  score = 10;
+  highscore = localStorage.getItem('Highscore')
+    ? +localStorage.getItem('Highscore')
+    : 0;
+  highscoreEl.textContent = highscore;
+  scoreEl.textContent = score;
+};
+init();
 
 // Game Logic :
 enter.addEventListener('click', function (e) {
@@ -61,18 +67,27 @@ enter.addEventListener('click', function (e) {
 });
 
 // Again Button Functionality :
-again.addEventListener('click', function (e) {
-  messageEl.textContent = 'Start !';
-  messageEl.style.color = 'var(--color-dark)';
-  messageEl.parentElement.style.background = 'var(--color-light)';
+const againFn = function () {
+  {
+    init();
+    messageEl.textContent = 'Start !';
+    messageEl.style.color = 'var(--color-dark)';
+    messageEl.parentElement.style.background = 'var(--color-light)';
 
-  answerEl.innerHTML = '<i class="fa-solid fa-question">';
-  userGuess.value = ' ';
-  score = 10;
-  scoreEl.textContent = score;
+    answerEl.innerHTML = '<i class="fa-solid fa-question">';
+    userGuess.value = ' ';
 
-  enter.removeAttribute('disabled');
-  userGuess.removeAttribute('disabled');
-  enter.style.opacity = 1;
-  userGuess.style.opacity = 1;
+    enter.removeAttribute('disabled');
+    userGuess.removeAttribute('disabled');
+    enter.style.opacity = 1;
+    userGuess.style.opacity = 1;
+  }
+};
+again.addEventListener('click', againFn);
+
+// Reset HighScore :
+resetHigscore.addEventListener('click', function (e) {
+  console.log('Old Highscore Reseted !');
+  localStorage.clear();
+  again();
 });
