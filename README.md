@@ -21,5 +21,7 @@ In This Game player must guess a secret number between 1 and 20. For each wrong 
 
 ### Note
 
+~ To reset the highscore , click on icon i .
+
 Please feel free to play the game and share your thoughts . </br>
 [https://harsh-v3.github.io/Guess-The-Number/](https://harsh-v3.github.io/Guess-The-Number/)
